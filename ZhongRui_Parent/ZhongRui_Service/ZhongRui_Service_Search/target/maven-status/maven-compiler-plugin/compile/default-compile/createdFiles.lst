@@ -1,0 +1,5 @@
+com\zhongrui\search\service\impl\SkuServiceImpl.class
+com\zhongrui\search\controller\SkuController.class
+com\zhongrui\search\SearchApplication.class
+com\zhongrui\search\dao\SkuEsMapper.class
+com\zhongrui\search\service\SkuService.class

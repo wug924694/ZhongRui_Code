@@ -1,0 +1,5 @@
+com\zhongrui\file\FastDFSFile.class
+com\zhongrui\config\SwaggerConfig.class
+com\zhongrui\controller\FileUploadController.class
+com\zhongrui\util\FastDFSUtils.class
+com\zhongrui\FileApplication.class
