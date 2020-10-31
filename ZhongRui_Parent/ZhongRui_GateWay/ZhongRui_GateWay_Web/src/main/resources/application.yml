@@ -1,6 +1,10 @@
 spring:
   application:
     name: gateway-web
+  redis:
+    host: 192.168.200.128
+    port: 6379
+    timeout: 20000
   cloud:
     gateway:
       globalcors:
@@ -13,20 +17,27 @@ spring:
               - PUT
               - DELETE
       routes:
+        - id: zhongrui_user_route
+            uri: lb://user
+            predicates:
+              - Path=/api/user/**
+            filters:
+              - StripPrefix=1
         - id: zhongrui_goods_route  #唯一标识
-          uri: http://localhost:9001  #将来路由的地址  路由的配置方法有两种 静态路由  动态路由
+          #uri: http://localhost:9001  #将来路由的地址  路由的配置方法有两种 静态路由  动态路由
+          uri: lb://goods #动态路由
           predicates:  #  断言标识路由的规则
             #- Host=cloud.zhongrui.com**
             #- Path=/**
-            - Path=/brand/**  #所有以api/brand的请求都会被路由到 localhost：9001的微服务上
+            - Path=/api/brand/**  #所有以api/brand的请求都会被路由到 localhost：9001的微服务上
           filters:
             #- PrefixPath=/brand
             - Striprefix=1  #去除请求路径上第一个/*
-            - name: RequestRateLimiter
+            - name: RequestRateLimiter  #请求数限流 名字不能随便写 ，使用默认的factory
               args:
-                key-resolver: "#{@ipKeyResolver}"
-                redis-rate-limiter.replenishRate: 1
-                redis-rate-limiter.burstCapacity: 2
+                key-resolver: "#{@ipKeyResolver}"   #用户身份识别的唯一标识
+                redis-rate-limiter.replenishRate: 1 #每秒只允许访问1次
+                redis-rate-limiter.burstCapacity: 3 #最大允许访问量
 server:
   port: 8001
 

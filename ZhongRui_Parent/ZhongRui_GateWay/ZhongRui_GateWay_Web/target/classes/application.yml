@@ -16,15 +16,27 @@ spring:
         - id: zhongrui_goods_route  #唯一标识
           uri: http://localhost:9001  #将来路由的地址  路由的配置方法有两种 静态路由  动态路由
           predicates:  #  断言标识路由的规则
-            - Host=cloud.zhongrui.com**
+            #- Host=cloud.zhongrui.com**
+            #- Path=/**
+            - Path=/brand/**  #所有以api/brand的请求都会被路由到 localhost：9001的微服务上
+          filters:
+            #- PrefixPath=/brand
+            - Striprefix=1  #去除请求路径上第一个/*
+            - name: RequestRateLimiter
+              args:
+                key-resolver: "#{@ipKeyResolver}"
+                redis-rate-limiter.replenishRate: 1
+                redis-rate-limiter.burstCapacity: 2
 server:
   port: 8001
+
 eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:7001/eureka
   instance:
     prefer-ip-address: true
+
 management:
   endpoint:
     gateway:

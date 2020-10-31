@@ -18,6 +18,7 @@
         <module>ZhongRui_Service_Canal</module>
         <module>ZhongRui_Service_Content</module>
         <module>ZhongRui_Service_Search</module>
+        <module>ZhongRui_Service_User</module>
     </modules>
     <dependencies>
         <dependency>

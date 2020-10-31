@@ -16,6 +16,7 @@
         <module>ZhongRui_Service_Goods_Api</module>
         <module>ZhongRui_Service_Content_Api</module>
         <module>ZhongRui_Service_Search_Api</module>
+        <module>ZhongRui_Service_User_Api</module>
     </modules>
 
     <dependencies>
