@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ZhongRui_Service_Search" />
+        <module name="ZhongRui_Service_Goods" />
+        <module name="ZhongRui_Service_Canal" />
+        <module name="ZhongRui_Service_Content" />
+        <module name="ZhongRui_Service_Goods_Api" />
+        <module name="ZhongRui_GateWay_Web" />
+        <module name="ZhongRui_Eureka" />
+        <module name="ZhongRui_Service_Content_Api" />
+        <module name="ZhongRui_Common" />
+        <module name="ZhongRui_Service_File" />
+        <module name="ZhongRui_Web_Search" />
+        <module name="ZhongRui_Common_DB" />
+        <module name="Code_Template" />
+        <module name="spring-boot-thymeleaf" />
+        <module name="ZhongRui_Service_Search_Api" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Code_Template" target="1.5" />
+      <module name="spring-boot-thymeleaf" target="1.8" />
+      <module name="ZhongRui_Common" target="1.8" />
+      <module name="ZhongRui_Common_DB" target="1.8" />
+      <module name="ZhongRui_Eureka" target="1.8" />
+      <module name="ZhongRui_GateWay" target="1.8" />
+      <module name="ZhongRui_GateWay_Web" target="1.8" />
+      <module name="ZhongRui_Parent" target="1.8" />
+      <module name="ZhongRui_Service" target="1.8" />
+      <module name="ZhongRui_Service-Api" target="1.8" />
+      <module name="ZhongRui_Service_Api" target="1.8" />
+      <module name="ZhongRui_Service_Canal" target="1.8" />
+      <module name="ZhongRui_Service_Content" target="1.8" />
+      <module name="ZhongRui_Service_Content_Api" target="1.8" />
+      <module name="ZhongRui_Service_File" target="1.8" />
+      <module name="ZhongRui_Service_Goods" target="1.8" />
+      <module name="ZhongRui_Service_Goods_Api" target="1.8" />
+      <module name="ZhongRui_Service_Search" target="1.8" />
+      <module name="ZhongRui_Service_Search_Api" target="1.8" />
+      <module name="ZhongRui_Web" target="1.8" />
+      <module name="ZhongRui_Web_Search" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ZhongRui_Common" options="-parameters" />
+      <module name="ZhongRui_Common_DB" options="-parameters" />
+      <module name="ZhongRui_Eureka" options="-parameters" />
+      <module name="ZhongRui_GateWay" options="-parameters" />
+      <module name="ZhongRui_GateWay_Web" options="-parameters" />
+      <module name="ZhongRui_Service_Canal" options="-parameters" />
+      <module name="ZhongRui_Service_Content" options="-parameters" />
+      <module name="ZhongRui_Service_Content_Api" options="-parameters" />
+      <module name="ZhongRui_Service_File" options="-parameters" />
+      <module name="ZhongRui_Service_Goods" options="-parameters" />
+      <module name="ZhongRui_Service_Goods_Api" options="-parameters" />
+      <module name="ZhongRui_Service_Search" options="-parameters" />
+      <module name="ZhongRui_Service_Search_Api" options="-parameters" />
+      <module name="ZhongRui_Web_Search" options="-parameters" />
+      <module name="spring-boot-thymeleaf" options="-parameters" />
+    </option>
+  </component>
+</project>

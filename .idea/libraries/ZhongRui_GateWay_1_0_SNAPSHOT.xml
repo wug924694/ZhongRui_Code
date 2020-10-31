@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ZhongRui_GateWay-1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_GateWay/target/ZhongRui_GateWay-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,14 @@
+com\zhongrui\goods\feign\SkuFeign.class
+com\zhongrui\goods\pojo\Category.class
+com\zhongrui\goods\pojo\Spu.class
+com\zhongrui\goods\pojo\Album.class
+com\zhongrui\goods\pojo\Brand.class
+com\zhongrui\goods\pojo\Para.class
+com\zhongrui\goods\pojo\Sku.class
+com\zhongrui\goods\pojo\CategoryBrand.class
+com\zhongrui\goods\pojo\Pref.class
+com\zhongrui\goods\pojo\Goods.class
+com\zhongrui\goods\pojo\Template.class
+com\zhongrui\goods\pojo\UndoLog.class
+com\zhongrui\goods\pojo\StockBack.class
+com\zhongrui\goods\pojo\Spec.class

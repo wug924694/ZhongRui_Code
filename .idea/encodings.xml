@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Common_DB/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Eureka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_GateWay/ZhongRui_GateWay_Web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_Canal/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_Content/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_File/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_Goods/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_Search/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service_Api/ZhongRui_Service_Content_Api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service_Api/ZhongRui_Service_Goods_Api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service_Api/ZhongRui_Service_Search_Api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Web/ZhongRui_Web_Search/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-thymeleaf/src/main/java" charset="UTF-8" />
+  </component>
+</project>

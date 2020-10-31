@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Code_Template/Code_Template.iml" filepath="$PROJECT_DIR$/Code_Template/Code_Template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Common/ZhongRui_Common.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Common/ZhongRui_Common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Common_DB/ZhongRui_Common_DB.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Common_DB/ZhongRui_Common_DB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Eureka/ZhongRui_Eureka.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Eureka/ZhongRui_Eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_GateWay/ZhongRui_GateWay.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_GateWay/ZhongRui_GateWay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_GateWay/ZhongRui_GateWay_Web/ZhongRui_GateWay_Web.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_GateWay/ZhongRui_GateWay_Web/ZhongRui_GateWay_Web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Parent.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service_Api/ZhongRui_Service-Api.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service_Api/ZhongRui_Service-Api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service_Api/ZhongRui_Service_Api.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service_Api/ZhongRui_Service_Api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_Canal/ZhongRui_Service_Canal.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_Canal/ZhongRui_Service_Canal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_Content/ZhongRui_Service_Content.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_Content/ZhongRui_Service_Content.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service_Api/ZhongRui_Service_Content_Api/ZhongRui_Service_Content_Api.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service_Api/ZhongRui_Service_Content_Api/ZhongRui_Service_Content_Api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_File/ZhongRui_Service_File.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_File/ZhongRui_Service_File.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_Goods/ZhongRui_Service_Goods.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_Goods/ZhongRui_Service_Goods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service_Api/ZhongRui_Service_Goods_Api/ZhongRui_Service_Goods_Api.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service_Api/ZhongRui_Service_Goods_Api/ZhongRui_Service_Goods_Api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_Search/ZhongRui_Service_Search.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_Search/ZhongRui_Service_Search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service_Api/ZhongRui_Service_Search_Api/ZhongRui_Service_Search_Api.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service_Api/ZhongRui_Service_Search_Api/ZhongRui_Service_Search_Api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Web/ZhongRui_Web.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Web/ZhongRui_Web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Web/ZhongRui_Web_Search/ZhongRui_Web_Search.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Web/ZhongRui_Web_Search/ZhongRui_Web_Search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-thymeleaf/spring-boot-thymeleaf.iml" filepath="$PROJECT_DIR$/spring-boot-thymeleaf/spring-boot-thymeleaf.iml" />
+    </modules>
+  </component>
+</project>

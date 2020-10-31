@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ZhongRui_Service_Goods_Api-1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service_Api/ZhongRui_Service_Goods_Api/target/ZhongRui_Service_Goods_Api-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

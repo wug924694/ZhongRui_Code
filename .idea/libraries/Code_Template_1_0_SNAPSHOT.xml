@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Code_Template-1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Code_Template/target/Code_Template-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
