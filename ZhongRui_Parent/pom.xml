@@ -19,6 +19,7 @@
         <module>ZhongRui_Eureka</module>
         <module>ZhongRui_Common</module>
         <module>ZhongRui_Common_DB</module>
+        <module>ZhongRui_User_OAuth</module>
 
     </modules>
     <parent>

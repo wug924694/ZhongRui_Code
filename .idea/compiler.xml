@@ -7,8 +7,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ZhongRui_Service_Goods" />
         <module name="ZhongRui_Service_Search" />
+        <module name="ZhongRui_Service_Goods" />
+        <module name="ZhongRui_Service_Canal" />
         <module name="ZhongRui_Service_Content" />
         <module name="ZhongRui_Service_Goods_Api" />
         <module name="ZhongRui_GateWay_Web" />
@@ -19,8 +20,8 @@
         <module name="ZhongRui_Web_Search" />
         <module name="ZhongRui_Common_DB" />
         <module name="Code_Template" />
-        <module name="ZhongRui_Service_Canal" />
         <module name="spring-boot-thymeleaf" />
+        <module name="ZhongRui_User_OAuth" />
         <module name="ZhongRui_Service_Search_Api" />
         <module name="ZhongRui_Service_User" />
         <module name="ZhongRui_Service_User_Api" />
@@ -48,6 +49,7 @@
       <module name="ZhongRui_Service_Search_Api" target="1.8" />
       <module name="ZhongRui_Service_User" target="1.8" />
       <module name="ZhongRui_Service_User_Api" target="1.8" />
+      <module name="ZhongRui_User_OAuth" target="1.8" />
       <module name="ZhongRui_Web" target="1.8" />
       <module name="ZhongRui_Web_Search" target="1.8" />
     </bytecodeTargetLevel>
@@ -69,6 +71,7 @@
       <module name="ZhongRui_Service_Search_Api" options="-parameters" />
       <module name="ZhongRui_Service_User" options="-parameters" />
       <module name="ZhongRui_Service_User_Api" options="-parameters" />
+      <module name="ZhongRui_User_OAuth" options="-parameters" />
       <module name="ZhongRui_Web_Search" options="-parameters" />
       <module name="spring-boot-thymeleaf" options="-parameters" />
     </option>

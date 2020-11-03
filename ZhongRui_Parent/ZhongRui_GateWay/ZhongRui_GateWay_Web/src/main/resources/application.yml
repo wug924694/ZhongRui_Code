@@ -24,7 +24,7 @@ spring:
             filters:
               - StripPrefix=1
         - id: zhongrui_goods_route  #唯一标识
-          #uri: http://localhost:9001  #将来路由的地址  路由的配置方法有两种 静态路由  动态路由
+          #uri: http://localhost:18081  #将来路由的地址  路由的配置方法有两种 静态路由  动态路由
           uri: lb://goods #动态路由
           predicates:  #  断言标识路由的规则
             #- Host=cloud.zhongrui.com**

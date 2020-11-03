@@ -22,6 +22,7 @@
       <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service_Api/ZhongRui_Service_Search_Api/ZhongRui_Service_Search_Api.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service_Api/ZhongRui_Service_Search_Api/ZhongRui_Service_Search_Api.iml" />
       <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_User/ZhongRui_Service_User.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_User/ZhongRui_Service_User.iml" />
       <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service_Api/ZhongRui_Service_User_Api/ZhongRui_Service_User_Api.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service_Api/ZhongRui_Service_User_Api/ZhongRui_Service_User_Api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_User_OAuth/ZhongRui_User_OAuth.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_User_OAuth/ZhongRui_User_OAuth.iml" />
       <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Web/ZhongRui_Web.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Web/ZhongRui_Web.iml" />
       <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Web/ZhongRui_Web_Search/ZhongRui_Web_Search.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Web/ZhongRui_Web_Search/ZhongRui_Web_Search.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-thymeleaf/spring-boot-thymeleaf.iml" filepath="$PROJECT_DIR$/spring-boot-thymeleaf/spring-boot-thymeleaf.iml" />
