@@ -26,11 +26,4 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 1000000
-
-#connection-timeout:服务连接超时时间
-#socket-connect：HTTP请求超时时间
-#ribbon.ReadTimeout: Feign请求读取数据超时时间
-#timeoutInMilliseconds：feign连接超时时间
-#cluster-name：Elasticsearch的集群节点名称，这里需要和Elasticsearch集群节点名称保持一致
-#cluster-nodes：Elasticsearch节点通信地址
+            timeoutInMilliseconds: 100000

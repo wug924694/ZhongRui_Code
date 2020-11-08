@@ -6,10 +6,12 @@ import com.zhongrui.goods.feign.SkuFeign;
 import com.zhongrui.goods.pojo.Sku;
 import com.zhongrui.search.dao.SkuEsMapper;
 import com.zhongrui.search.pojo.SkuInfo;
+import com.zhongrui.search.service.SearchResultMapperImpl;
 import com.zhongrui.search.service.SkuService;
 import org.apache.commons.lang.StringUtils;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.search.aggregations.Aggregation;
 import org.elasticsearch.search.aggregations.AggregationBuilders;
 import org.elasticsearch.search.aggregations.bucket.terms.StringTerms;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
@@ -52,6 +54,8 @@ public class SkuServiceImpl implements SkuService {
             Map<String, Object> map = JSON.parseObject(skuInfo.getSpec(), Map.class);
             skuInfo.setSpecMap(map);
         }
+
+
         // 2.调用spring data elasticsearch的API 导入到ES中
         skuEsMapper.saveAll(skuInfos);
     }
@@ -83,11 +87,12 @@ public class SkuServiceImpl implements SkuService {
 
     @Override
     public Map search(Map<String, String> searchMap) {
-        if(searchMap == null ){
+        if(searchMap == null && searchMap.size() == 0){
             searchMap = new HashMap<String,String>();
         }
         //1.获取到关键字
         String keywords = searchMap.get("keywords");
+        System.out.println(keywords+"===========================");
 
         //2.判断是否为空 如果 为空 给一个默认 值:华为
         if (StringUtils.isEmpty(keywords)) {
@@ -118,6 +123,9 @@ public class SkuServiceImpl implements SkuService {
         //设置前缀 和 后缀
         nativeSearchQueryBuilder.withHighlightBuilder(new HighlightBuilder().preTags("<em style=\"color:red\">").postTags("</em>"));
 
+
+
+
         //匹配查询  先分词 再查询  主条件查询
         //参数1 指定要搜索的字段
         //参数2 要搜索的值(先分词 再搜索)
@@ -126,7 +134,9 @@ public class SkuServiceImpl implements SkuService {
         nativeSearchQueryBuilder.withQuery(QueryBuilders.multiMatchQuery(keywords,"name","categoryName","brandName"));
 
 
+
         //========================过滤查询 开始=====================================
+
         BoolQueryBuilder boolQueryBuilder = QueryBuilders.boolQuery();
 
         //4.4 过滤查询的条件设置   商品分类的条件
@@ -166,6 +176,7 @@ public class SkuServiceImpl implements SkuService {
             }
 
         }
+
 
         //过滤查询
         nativeSearchQueryBuilder.withFilter(boolQueryBuilder);

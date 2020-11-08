@@ -5,6 +5,9 @@ import org.springframework.security.jwt.Jwt;
 import org.springframework.security.jwt.JwtHelper;
 import org.springframework.security.jwt.crypto.sign.RsaVerifier;
 
+import java.io.UnsupportedEncodingException;
+import java.util.Base64;
+
 /*****
  * @Author: www.youyue
  * @Date: 2019/7/7 13:48
@@ -19,10 +22,9 @@ public class ParseJwtTest {
     @Test
     public void testParseToken(){
         //令牌
-        String token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlcyI6IlJPTEVfVklQLFJPTEVfVVNFUiIsIm5hbWUiOiJ5b3V5dWUiLCJpZCI6IjEifQ.R6ISBEtUitmt0y6mHXCmu7EbdiyM-ts2YjGgEaOr_ce1gFd7F_pNY57jyhROf5qoxSpx_9dXjvVyesqF7BOsgMdemmFyKya9vGco-gZe0fQAyjICDawlHuOUa1bUaMx92WAVkoGDjqyQS9B98n3TdP6Dub35bv4LNOLvGBwNg2VfBWA0ml95dt00874YpW3ILZSQoVML-9e6SGfe7uLKDwxeeJyW0dj7XDCTtIRM0D-fSXKrg24f2iYhk5Cgyv0k9sNgtk4qMPtA6Cr0T7NQ1w_Vi7mu2pehiOxpwY7R5ZLfVGh0qmux9PvDBUenCu2DihZPNdBD_3dQME7-2OOnHQ";
-
-        //公钥
-        String publickey = "-----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp6rJLg2ExkNY4jiZHN1N5r8XzDWP0pQk5fnlc7xNiB64aX5ri4eqmpb/3VfxB0rq44NH6BI8jQbUg0QzrALNstXLDR0gpBgrwmhaxZ7JK9b/DEoraAsw9bB/jrFLXnptGLw2xeeHQ6NkV2A+ByDOR8sMSLhGIzthiN3Cj6XND/nb0Me8jWBiPVmoQ8uHcy16WPB4kfaKEoysd6yA91i6rq+igTxhhZEzhR1mt5fEiHglTrhjkknVqH2oNfi0KouBI/zCRfAhCARTfFWdf/foi8VOxgzcYlWJ1Y0xc4eTB3Y8M2rYla0f9Qt7pel3WbKYUkdWvi8eOaWAsfAjHuNBRwIDAQAB-----END PUBLIC KEY-----";
+        String token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZGRyZXNzIjpudWxsLCJzY29wZSI6WyJhcHAiXSwibmFtZSI6bnVsbCwiY29tcGFueSI6bnVsbCwiaWQiOm51bGwsImV4cCI6MjAzNjc5OTEzNCwiYXV0aG9yaXRpZXMiOlsidmlwIiwidXNlciJdLCJqdGkiOiIzZjFiM2ZjNC1iMDhiLTQyNjUtYjlkNi04ZTk0Y2UwNzZkZTEiLCJjbGllbnRfaWQiOiJ6aG9uZ3J1aSIsInVzZXJuYW1lIjoidGFuZ3NlbmcifQ.RoH_443ojCvbC8idUdSlwZqTc7WUMd_o1BD4sRRqTkreUcv8fa7shqo1BiU8xjTUrhBQqnuP02-yP5EZAlTAUajLFR8ODjXuRjzBpByhj8pitnGuENewcRihqIdN8DcTlovrgzUSaxQ_Qkx-mqdT2iZvlcvGtg2PSRH1MQ_r96pABE08ReYipQ6I6fr2oR_tqHdCttY6pzVZw1Vucoz8qtTwwSfNDqqcMvLWjZqirn8klfInr6R3SrV8WdESGoJ_ZE6dLf5I7hXKHQ5USbK2K3ms8ZFLbMfeJUuxtRQa8CibqYoRN1yB0sDQtm8J95ygnOoufFbmon3vye5B7r2Ytg";
+         //公钥
+        String publickey = "-----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgEdQEIUZSsH9TZTYQrU8r+nChFwNu6KVf2z4C3CmDnMwY3MVpWyST99OzcTJBZt/4XvHVUeAEQ+a5yNLmLqkHvtBKe4E0aisl5s8wH+p5Y21KQoWiegw5XEaRfjmLVL7tH9G9mdy5VndSnSOGZHEtad3CIT8f5MUusi2G7Q/WM/1ga7AWuDHkGBsy4GRMwpKsm+/H2W5WAC0zE0EyG0nVFgbu6xAnC32NvMY4pAcFrqRTFBrO+ageuIhjsm1vlrmW35wNhO8FwCG5ExvD8iQXh6Kf1V6/Z92f8hYyayY+llsX7LEI1ZYYOrz6gltfWkymYOughlD7gf5q852Z4cJ6QIDAQAB-----END PUBLIC KEY-----";
         //校验Jwt
         Jwt jwt = JwtHelper.decodeAndVerify(token, new RsaVerifier(publickey));
 
@@ -32,5 +34,19 @@ public class ParseJwtTest {
         //jwt令牌
         String encoded = jwt.getEncoded();
         System.out.println(encoded);
+    }
+
+    @Test
+    public void testBasicBase64() throws UnsupportedEncodingException {
+        //这段内容其实就是客户端ID和秘钥 加密之后的结果
+        String key = "emhvbmdydWk6emhvbmdydWk=";
+        byte[] bytes = Base64.getDecoder().decode(key.getBytes());
+        String deco = new String(bytes,"utf-8");
+        System.out.println(deco);
+
+        //Basic Base64(客户端ID:秘钥)  zhongrui:zhongrui
+        //将来用户在进行用户名个密码登录时需要生成令牌的时候 我们可以自动帮助他加入这个客户端ID和秘钥
+
+        //请求头  Authorizationed=Basic emhvbmdydWk6emhvbmdydWk=
     }
 }

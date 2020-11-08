@@ -23,7 +23,7 @@ public class Spu implements Serializable{
 	@JsonSerialize(using = ToStringSerializer.class)
 	@Id
 	@Column(name = "id")
-	private Long id;//主键
+	private String id;//主键
 	@ApiModelProperty(value = "货号",required = false)
     @Column(name = "sn")
 	private String sn;//货号
@@ -90,12 +90,12 @@ public class Spu implements Serializable{
 
 
 	//get方法
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
 
 	//set方法
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	//get方法

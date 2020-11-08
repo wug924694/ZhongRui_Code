@@ -19,6 +19,7 @@ E:\develop\ideaCode\Microservices\ZhongRui_Parent\ZhongRui_Service\ZhongRui_Serv
 E:\develop\ideaCode\Microservices\ZhongRui_Parent\ZhongRui_Service\ZhongRui_Service_Goods\src\main\java\com\zhongrui\goods\service\CategoryService.java
 E:\develop\ideaCode\Microservices\ZhongRui_Parent\ZhongRui_Service\ZhongRui_Service_Goods\src\main\java\com\zhongrui\goods\dao\CategoryMapper.java
 E:\develop\ideaCode\Microservices\ZhongRui_Parent\ZhongRui_Service\ZhongRui_Service_Goods\src\main\java\com\zhongrui\goods\dao\UndoLogMapper.java
+E:\develop\ideaCode\Microservices\ZhongRui_Parent\ZhongRui_Service\ZhongRui_Service_Goods\src\main\java\com\zhongrui\goods\config\ResourceServerConfig.java
 E:\develop\ideaCode\Microservices\ZhongRui_Parent\ZhongRui_Service\ZhongRui_Service_Goods\src\main\java\com\zhongrui\goods\service\SpuService.java
 E:\develop\ideaCode\Microservices\ZhongRui_Parent\ZhongRui_Service\ZhongRui_Service_Goods\src\main\java\com\zhongrui\goods\service\SkuService.java
 E:\develop\ideaCode\Microservices\ZhongRui_Parent\ZhongRui_Service\ZhongRui_Service_Goods\src\main\java\com\zhongrui\goods\controller\BaseExceptionHandler.java

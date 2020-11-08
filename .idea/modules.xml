@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/CAS/CAS.iml" filepath="$PROJECT_DIR$/CAS/CAS.iml" />
       <module fileurl="file://$PROJECT_DIR$/Code_Template/Code_Template.iml" filepath="$PROJECT_DIR$/Code_Template/Code_Template.iml" />
       <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Common/ZhongRui_Common.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Common/ZhongRui_Common.iml" />
       <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Common_DB/ZhongRui_Common_DB.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Common_DB/ZhongRui_Common_DB.iml" />
@@ -18,6 +19,8 @@
       <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_File/ZhongRui_Service_File.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_File/ZhongRui_Service_File.iml" />
       <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_Goods/ZhongRui_Service_Goods.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_Goods/ZhongRui_Service_Goods.iml" />
       <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service_Api/ZhongRui_Service_Goods_Api/ZhongRui_Service_Goods_Api.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service_Api/ZhongRui_Service_Goods_Api/ZhongRui_Service_Goods_Api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_Order/ZhongRui_Service_Order.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_Order/ZhongRui_Service_Order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service_Api/ZhongRui_Service_Order_Api/ZhongRui_Service_Order_Api.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service_Api/ZhongRui_Service_Order_Api/ZhongRui_Service_Order_Api.iml" />
       <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_Search/ZhongRui_Service_Search.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_Search/ZhongRui_Service_Search.iml" />
       <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service_Api/ZhongRui_Service_Search_Api/ZhongRui_Service_Search_Api.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service_Api/ZhongRui_Service_Search_Api/ZhongRui_Service_Search_Api.iml" />
       <module fileurl="file://$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_User/ZhongRui_Service_User.iml" filepath="$PROJECT_DIR$/ZhongRui_Parent/ZhongRui_Service/ZhongRui_Service_User/ZhongRui_Service_User.iml" />

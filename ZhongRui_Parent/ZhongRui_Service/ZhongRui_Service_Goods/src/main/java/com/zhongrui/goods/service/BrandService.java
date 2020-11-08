@@ -28,9 +28,7 @@ public interface BrandService {
     //分页查询
     PageInfo<Brand> findPage(Integer page, Integer size);
 
-    //条件分页查询
+    //带条件的分页
     PageInfo<Brand> findPage(Brand brand,Integer page, Integer size);
 
-    //根据分类查询对应品牌集合
-    List<Brand> findByCategory(Integer categoryId);
 }

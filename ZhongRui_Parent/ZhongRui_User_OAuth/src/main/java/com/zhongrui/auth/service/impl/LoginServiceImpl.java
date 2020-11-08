@@ -1,5 +1,6 @@
 package com.zhongrui.auth.service.impl;
 
+
 import com.zhongrui.auth.service.LoginService;
 import com.zhongrui.auth.util.AuthToken;
 import org.springframework.beans.factory.annotation.Autowired;

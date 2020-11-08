@@ -3,28 +3,25 @@ package com.zhongrui.search.controller;
 import com.zhongrui.entity.Result;
 import com.zhongrui.entity.StatusCode;
 import com.zhongrui.search.service.SkuService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/search")
 @CrossOrigin
+@RequestMapping("/search")
 public class SkuController {
 
-    @Resource
+    @Autowired
     private SkuService skuService;
 
-    /**
-     * 导入数据
-     * @return
-     */
-    @GetMapping("/import")
-    public Result search(){
+    @RequestMapping("/import")
+    public Result importEs() {
+
         skuService.importSku();
-        return new Result(true, StatusCode.OK,"导入数据到索引库中成功！");
+        return new Result(true, StatusCode.OK, "导入成功");
     }
 
     /**
@@ -34,11 +31,11 @@ public class SkuController {
      */
     @GetMapping
     public Map search(@RequestParam(required = false) Map searchMap){
-        if(searchMap == null){
+        if(searchMap == null && searchMap.size() == 0){
             searchMap = new HashMap<String,String>();
         }
         Object pageNum = searchMap.get("pageNum");
-        if(pageNum == null){
+        if(pageNum==null){
             searchMap.put("pageNum","1");
         }
         if(pageNum instanceof Integer){

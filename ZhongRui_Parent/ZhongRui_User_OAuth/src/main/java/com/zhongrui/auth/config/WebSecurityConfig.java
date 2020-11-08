@@ -1,6 +1,5 @@
 package com.zhongrui.auth.config;
 
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
@@ -16,7 +15,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 @EnableWebSecurity
 @Order(-1)
-class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+class WebSecurityConfig extends WebSecurityConfigurerAdapter {//WebSecurityConfig   代表什么？  等同于  spring-security.xml
 
     /***
      * 忽略安全拦截的URL

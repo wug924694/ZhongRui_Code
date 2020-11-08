@@ -5,15 +5,15 @@ import java.util.Arrays;
 
 public class FastDFSFile implements Serializable {
 
-    private String name; //文件名称
+    private String name;//文件的名称
 
-    private byte[] content; //文件内容
+    private byte[] content;//文件内容
 
-    private String ext; //文件扩展名   jpg
+    private String ext;  //扩展名 jpg
 
-    private String md5; //文件md5的摘要值
+    private String md5;//文件md5的摘要值
 
-    private String author;  //作者
+    private String author;//作者
 
     public FastDFSFile() {
     }

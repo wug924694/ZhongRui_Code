@@ -3,8 +3,6 @@ spring:
     multipart:
       max‐file‐size: 10MB
       max‐request‐size: 10MB
-  application:
-    name: zhongrui-file-service
 server:
   port: 9008
 eureka:

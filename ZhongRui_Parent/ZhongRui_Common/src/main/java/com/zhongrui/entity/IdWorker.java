@@ -163,8 +163,8 @@ public class IdWorker {
     public static void main(String[] args) {
         //推特  26万个不重复的ID
         IdWorker idWorker = new IdWorker(0,0);
-        for (int i = 0; i <2600 ; i++) {
-            System.out.println(idWorker.nextId());
+        for (int i = 0; i <260000 ; i++) {
+            idWorker.nextId();
         }
     }
 

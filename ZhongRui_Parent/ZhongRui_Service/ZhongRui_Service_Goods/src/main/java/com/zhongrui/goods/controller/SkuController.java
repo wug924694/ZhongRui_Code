@@ -10,83 +10,132 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/****
+ * @Author:admin
+ * @Description:
+ * @Date 2019/6/14 0:18
+ *****/
+
 @RestController
-@CrossOrigin
 @RequestMapping("/sku")
+@CrossOrigin
 public class SkuController {
 
     @Autowired
     private SkuService skuService;
 
-    @GetMapping("/status/{status}")
-    public Result<List<Sku>> findByStatus(@PathVariable("status") String status) {
-        List<Sku> skus = skuService.findByStatus(status);
-        return new Result<>(true, StatusCode.OK, "根据状态查询Sku成功", skus);
-    }
-
-
-    @GetMapping
-    public Result<List<Sku>> findAll() {
-        List<Sku> skus = skuService.findAll();
-        if (skus == null) {
-            return new Result<>(false, StatusCode.ERROR, "查找Sku不存在");
-        }
-        return new Result<>(true, StatusCode.OK, "查询Sku成功", skus);
-    }
-
-    @GetMapping("/{id}")
-    public Result<Sku> findById(@PathVariable("id") String id) {
-        Sku sku = skuService.findById(id);
-        if (sku == null) {
-            return new Result<>(false, StatusCode.ERROR, "查询失败，不存在");
-        }
-        return new Result<>(true, StatusCode.OK, "根据id查询sku成功", sku);
-    }
-
-    @PostMapping
-    public Result add(@RequestBody Sku sku) {
-        skuService.add(sku);
-        return new Result(true, StatusCode.OK, "添加Sku成功");
-    }
-
-    @PutMapping("/{id}")
-    public Result update(@PathVariable("id") Long id, @RequestBody Sku sku) {
-        sku.setId(id);
-        skuService.update(sku);
-        return new Result(true, StatusCode.OK, "修改ku成功");
-    }
-
-    @DeleteMapping("/{id}")
-    public Result delete(@PathVariable("id") String id) {
-        skuService.delete(id);
-        return new Result(true, StatusCode.OK, "删除Sku成功");
-    }
-
-    @PostMapping("/search")
-    public Result<List<Sku>> findList(@RequestBody Sku sku) {
-        List<Sku> skus = skuService.findList(sku);
-        if (skus == null) {
-            return new Result<>(false, StatusCode.ERROR, "多条件查询失败");
-        }
-        return new Result<>(true, StatusCode.OK, "多条件查询sku成功", skus);
-    }
-
-    @GetMapping("/search/{page}/{size}")
-    public Result<List<Sku>> findList(@PathVariable("page") Integer page, @PathVariable("size") Integer size) {
-
-        PageInfo<Sku> pageInfo = skuService.findPage(page, size);
-        if (pageInfo == null) {
-            return new Result<>(false, StatusCode.ERROR, "分页查询失败");
-        }
-        return new Result<>(true, StatusCode.OK, "分页查询sku成功", pageInfo);
-    }
-
-    @PostMapping("/search/{page}/{size}")
-    public Result<List<Sku>> findList(@RequestBody Sku sku, @PathVariable("page") Integer page, @PathVariable("size") Integer size) {
+    /***
+     * Sku分页条件搜索实现
+     * @param sku
+     * @param page
+     * @param size
+     * @return
+     */
+    @PostMapping(value = "/search/{page}/{size}" )
+    public Result<PageInfo> findPage(@RequestBody(required = false)  Sku sku, @PathVariable  int page, @PathVariable  int size){
+        //调用SkuService实现分页条件查询Sku
         PageInfo<Sku> pageInfo = skuService.findPage(sku, page, size);
-        if (pageInfo == null) {
-            return new Result<>(false, StatusCode.ERROR, "多条件分页查询失败");
-        }
-        return new Result<>(true, StatusCode.OK, "多条件分页查询sku成功", pageInfo);
+        return new Result(true, StatusCode.OK,"查询成功",pageInfo);
+    }
+
+    /***
+     * Sku分页搜索实现
+     * @param page:当前页
+     * @param size:每页显示多少条
+     * @return
+     */
+    @GetMapping(value = "/search/{page}/{size}" )
+    public Result<PageInfo> findPage(@PathVariable  int page, @PathVariable  int size){
+        //调用SkuService实现分页查询Sku
+        PageInfo<Sku> pageInfo = skuService.findPage(page, size);
+        return new Result<PageInfo>(true,StatusCode.OK,"查询成功",pageInfo);
+    }
+
+    /***
+     * 多条件搜索品牌数据
+     * @param sku
+     * @return
+     */
+    @PostMapping(value = "/search" )
+    public Result<List<Sku>> findList(@RequestBody(required = false)  Sku sku){
+        //调用SkuService实现条件查询Sku
+        List<Sku> list = skuService.findList(sku);
+        return new Result<List<Sku>>(true,StatusCode.OK,"查询成功",list);
+    }
+
+    /***
+     * 根据ID删除品牌数据
+     * @param id
+     * @return
+     */
+    @DeleteMapping(value = "/{id}" )
+    public Result delete(@PathVariable String id){
+        //调用SkuService实现根据主键删除
+        skuService.delete(id);
+        return new Result(true,StatusCode.OK,"删除成功");
+    }
+
+    /***
+     * 修改Sku数据
+     * @param sku
+     * @param id
+     * @return
+     */
+    @PutMapping(value="/{id}")
+    public Result update(@RequestBody  Sku sku,@PathVariable String id){
+        //设置主键值
+        sku.setId(Long.valueOf(id));
+        //调用SkuService实现修改Sku
+        skuService.update(sku);
+        return new Result(true,StatusCode.OK,"修改成功");
+    }
+
+    /***
+     * 新增Sku数据
+     * @param sku
+     * @return
+     */
+    @PostMapping
+    public Result add(@RequestBody   Sku sku){
+        //调用SkuService实现添加Sku
+        skuService.add(sku);
+        return new Result(true,StatusCode.OK,"添加成功");
+    }
+
+    /***
+     * 根据ID查询Sku数据
+     * @param id
+     * @return
+     */
+    @GetMapping("/{id}")
+    public Result<Sku> findById(@PathVariable String id){
+        //调用SkuService实现根据主键查询Sku
+        Sku sku = skuService.findById(id);
+        return new Result<Sku>(true,StatusCode.OK,"查询成功",sku);
+    }
+
+    /***
+     * 查询Sku全部数据
+     * @return
+     */
+    @GetMapping
+    public Result<List<Sku>> findAll(){
+        //调用SkuService实现查询所有Sku
+        List<Sku> list = skuService.findAll();
+        return new Result<List<Sku>>(true, StatusCode.OK,"查询成功",list) ;
+    }
+
+    /***
+     * 根据审核状态查询Sku
+     * @param status
+     * @return
+     */
+    @GetMapping("/status/{status}")
+    public Result<List<Sku>> findByStatus(@PathVariable String status){
+
+        System.out.println("goosController执行了......................1");
+        List<Sku> list = skuService.findByStatus(status);
+        System.out.println("goosController执行了......................2");
+        return new Result<List<Sku>>(true,StatusCode.OK,"查询成功",list);
     }
 }

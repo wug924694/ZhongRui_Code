@@ -11,4 +11,5 @@ com\zhongrui\goods\pojo\Goods.class
 com\zhongrui\goods\pojo\Template.class
 com\zhongrui\goods\pojo\UndoLog.class
 com\zhongrui\goods\pojo\StockBack.class
+com\zhongrui\goods\feign\SpuFeign.class
 com\zhongrui\goods\pojo\Spec.class

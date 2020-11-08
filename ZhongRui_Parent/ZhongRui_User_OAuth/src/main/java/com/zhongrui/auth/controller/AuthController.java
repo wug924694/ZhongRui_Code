@@ -1,10 +1,10 @@
 package com.zhongrui.auth.controller;
 
-import com.zhongrui.entity.Result;
-import com.zhongrui.entity.StatusCode;
 import com.zhongrui.auth.service.AuthService;
 import com.zhongrui.auth.util.AuthToken;
 import com.zhongrui.auth.util.CookieUtil;
+import com.zhongrui.entity.Result;
+import com.zhongrui.entity.StatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.util.StringUtils;
@@ -21,8 +21,8 @@ import javax.servlet.http.HttpServletResponse;
  * @Date: 2019/7/7 16:42
  * @Description: com.zhongrui.oauth.controller
  ****/
-@RestController
-@RequestMapping(value = "/userx")
+//@RestController
+//@RequestMapping(value = "/userx")
 public class AuthController {
 
     //客户端ID

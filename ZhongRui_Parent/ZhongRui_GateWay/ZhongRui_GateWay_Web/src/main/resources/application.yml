@@ -18,36 +18,44 @@ spring:
               - DELETE
       routes:
         - id: zhongrui_user_route
-            uri: lb://user
-            predicates:
-              - Path=/api/user/**
-            filters:
-              - StripPrefix=1
+          uri: lb://user
+          predicates:
+            - Path=/api/user/**
+          filters:
+            - StripPrefix=1
         - id: zhongrui_goods_route  #唯一标识
           #uri: http://localhost:18081  #将来路由的地址  路由的配置方法有两种 静态路由  动态路由
-          uri: lb://goods #动态路由
+          uri: lb://goods  #动态路由
           predicates:  #  断言标识路由的规则
-            #- Host=cloud.zhongrui.com**
-            #- Path=/**
-            - Path=/api/brand/**  #所有以api/brand的请求都会被路由到 localhost：9001的微服务上
+          #- Host=cloud.zhongrui.com**   #cloud.zhongrui.com:8001/brand/1  --> localhost:18081/brand/1
+          #- Path=/brand/** #路由相匹配的地址
+          #- Path=/api/brand/**
+            - Path=/api/brand/**
+          #所有以/api/brand/的请求  都会被路由到localhost:18081的微服务上
+          #希望的是该路径由微服务网关自动给我们添加/api 每个请求真实的微服务时(路由) 需要使用微服务网关将/api去掉
           filters:
             #- PrefixPath=/brand
-            - Striprefix=1  #去除请求路径上第一个/*
-            - name: RequestRateLimiter  #请求数限流 名字不能随便写 ，使用默认的factory
+            #将请求路径上的第一个  地址  /*  自动去掉
+            - StripPrefix=1
+            #用户请求/**  --》  /brand/1115  将来肯定会路由到localhost:18081/brand/1115
+            #- PrefixPath=/brand  #localhost:8001/1115   --->  localhost:18081/brand/1115
+            #限流配置
+            - name: RequestRateLimiter #请求数限流 名字不能随便写 ，使用默认的facatory
               args:
-                key-resolver: "#{@ipKeyResolver}"   #用户身份识别的唯一标识
-                redis-rate-limiter.replenishRate: 1 #每秒只允许访问1次
-                redis-rate-limiter.burstCapacity: 3 #最大允许访问量
+                #用户身份识别的唯一标识
+                key-resolver: "#{@ipKeyResolver}"
+                #每秒只允许访问1次
+                redis-rate-limiter.replenishRate: 1
+                #最大允许访问量
+                redis-rate-limiter.burstCapacity: 3
 server:
   port: 8001
-
 eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:7001/eureka
   instance:
     prefer-ip-address: true
-
 management:
   endpoint:
     gateway:

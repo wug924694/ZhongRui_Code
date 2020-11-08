@@ -12,3 +12,4 @@ E:\develop\ideaCode\Microservices\ZhongRui_Parent\ZhongRui_Service_Api\ZhongRui_
 E:\develop\ideaCode\Microservices\ZhongRui_Parent\ZhongRui_Service_Api\ZhongRui_Service_Goods_Api\src\main\java\com\zhongrui\goods\pojo\Sku.java
 E:\develop\ideaCode\Microservices\ZhongRui_Parent\ZhongRui_Service_Api\ZhongRui_Service_Goods_Api\src\main\java\com\zhongrui\goods\pojo\Pref.java
 E:\develop\ideaCode\Microservices\ZhongRui_Parent\ZhongRui_Service_Api\ZhongRui_Service_Goods_Api\src\main\java\com\zhongrui\goods\pojo\Spu.java
+E:\develop\ideaCode\Microservices\ZhongRui_Parent\ZhongRui_Service_Api\ZhongRui_Service_Goods_Api\src\main\java\com\zhongrui\goods\feign\SpuFeign.java

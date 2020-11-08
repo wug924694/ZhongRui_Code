@@ -1,7 +1,7 @@
 package com.zhongrui.auth.config;
 
+
 import com.zhongrui.auth.util.UserJwt;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -9,13 +9,15 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.oauth2.provider.token.DefaultUserAuthenticationConverter;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 @Component
 public class CustomUserAuthenticationConverter extends DefaultUserAuthenticationConverter {
 
-    @Autowired
+
+    @Resource
     UserDetailsService userDetailsService;
 
     @Override
@@ -35,6 +37,8 @@ public class CustomUserAuthenticationConverter extends DefaultUserAuthentication
         }
         response.put("name", userJwt.getName());
         response.put("id", userJwt.getId());
+        response.put("address",userJwt.getAddress());
+        response.put("company",userJwt.getComnpany());
         //公司 response.put("compy", "songsi");
         if (authentication.getAuthorities() != null && !authentication.getAuthorities().isEmpty()) {
             response.put("authorities", AuthorityUtils.authorityListToSet(authentication.getAuthorities()));

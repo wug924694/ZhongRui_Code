@@ -3,6 +3,7 @@ package com.zhongrui.search.service;
 import java.util.Map;
 
 public interface SkuService {
+
     /***
      * 导入SKU数据
      */

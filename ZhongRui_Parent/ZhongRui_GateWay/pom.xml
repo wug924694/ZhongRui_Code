@@ -11,28 +11,32 @@
 
     <artifactId>ZhongRui_GateWay</artifactId>
     <packaging>pom</packaging>
-    <description>gateway 网关父工程</description>
+    <description>gateway的网关父工程</description>
     <modules>
         <module>ZhongRui_GateWay_Web</module>
     </modules>
 
+    <!--网关依赖-->
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
         <!--redis-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis-reactive</artifactId>
         </dependency>
     </dependencies>
+
 </project>

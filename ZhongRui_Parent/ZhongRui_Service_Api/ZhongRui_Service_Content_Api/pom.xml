@@ -10,6 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>ZhongRui_Service_Content_Api</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>../ZhongRui_Service_Order_Api</module>
+    </modules>
 
 
 </project>

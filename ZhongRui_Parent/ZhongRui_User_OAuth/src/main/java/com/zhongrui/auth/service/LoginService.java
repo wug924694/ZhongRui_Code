@@ -1,5 +1,6 @@
 package com.zhongrui.auth.service;
 
+
 import com.zhongrui.auth.util.AuthToken;
 
 /**

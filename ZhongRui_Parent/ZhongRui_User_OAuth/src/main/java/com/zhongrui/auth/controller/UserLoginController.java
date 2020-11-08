@@ -1,10 +1,11 @@
 package com.zhongrui.auth.controller;
 
-import com.zhongrui.entity.Result;
-import com.zhongrui.entity.StatusCode;
 import com.zhongrui.auth.service.LoginService;
 import com.zhongrui.auth.util.AuthToken;
 import com.zhongrui.auth.util.CookieUtil;
+import com.zhongrui.entity.Result;
+import com.zhongrui.entity.StatusCode;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
